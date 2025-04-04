@@ -1,5 +1,7 @@
 package server.domain;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
@@ -17,6 +19,7 @@ public class DataBase {
 
     private Map<String, Topic> topics = new ConcurrentHashMap<>();
 
+    @JsonIgnore
     public Map<String, Integer> getTopicsMap() {
         Map<String, Integer> map = new HashMap<>();
         for (String topic : topics.keySet()) {
@@ -71,13 +74,14 @@ public class DataBase {
         topics.get(topic).votes.get(vote).answers.get(answer).users.add(user);
     }
 
-//---------------------------------------------------------------------------------------------------------------
 
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
     public static class Topic {
 
         private final Map<String, Vote> votes = new ConcurrentHashMap<>();
     }
 
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
     public static class Vote {
 
         private final String creator;
@@ -93,6 +97,7 @@ public class DataBase {
         }
     }
 
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
     public static class Answer {
 
         private final Set<String> users = new HashSet<>();

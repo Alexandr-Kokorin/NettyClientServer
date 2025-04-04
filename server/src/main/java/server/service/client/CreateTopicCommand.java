@@ -9,6 +9,18 @@ public class CreateTopicCommand extends ClientCommand {
 
     @Override
     public Response execute(Request request) {
-        return null;
+        if (dataBase.isExistTopic(request.body())) {
+            return Response.builder()
+                .status(409)
+                .clientCommand(request.clientCommand())
+                .body("Раздел с таким названием уже существует.")
+                .build();
+        }
+
+        dataBase.addTopic(request.body());
+        return Response.builder()
+            .status(200)
+            .clientCommand(request.clientCommand())
+            .build();
     }
 }

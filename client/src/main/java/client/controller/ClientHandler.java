@@ -36,9 +36,10 @@ public class ClientHandler {
 
         if (nettyClient.getLogin() != null) {
             authorizedRead(command);
-        }
-        else if (command.matches("^login\\s+-u=(?<username>\\w+)$")) {
+        } else if (command.matches("^login\\s+-u=(?<username>\\w+)$")) {
             loginCommand.execute(command);
+        } else if (command.matches("^exit$")) {
+            exitCommand.execute(command);
         } else {
             System.out.println("Такой команды не существует или вы не авторизованы.");
             read();
@@ -48,29 +49,21 @@ public class ClientHandler {
     private void authorizedRead(String command) {
         if (command.matches("^create\\s+topic\\s+-n=(?<topic>\\w+)$")) {
             createTopicCommand.execute(command);
-        }
-        else if (command.matches("^view$")) {
+        } else if (command.matches("^view$")) {
             viewCommand.execute(command);
-        }
-        else if (command.matches("^view\\s+-t=(?<topic>\\w+)$")) {
+        } else if (command.matches("^view\\s+-t=(?<topic>\\w+)$")) {
             viewTopicCommand.execute(command);
-        }
-        else if (command.matches("^create\\s+vote\\s+-t=(?<topic>\\w+)$")) {
+        } else if (command.matches("^create\\s+vote\\s+-t=(?<topic>\\w+)$")) {
             createVoteCommand.execute(command);
-        }
-        else if (command.matches("^view\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
+        } else if (command.matches("^view\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
             viewVoteCommand.execute(command);
-        }
-        else if (command.matches("^vote\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
+        } else if (command.matches("^vote\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
             voteCommand.execute(command);
-        }
-        else if (command.matches("^delete\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
+        } else if (command.matches("^delete\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
             deleteVoteCommand.execute(command);
-        }
-        else if (command.matches("^exit$")) {
+        } else if (command.matches("^exit$")) {
             exitCommand.execute(command);
-        }
-        else {
+        } else {
             System.out.println("Такой команды не существует.");
             read();
         }

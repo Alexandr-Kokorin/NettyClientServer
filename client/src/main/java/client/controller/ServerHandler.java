@@ -34,23 +34,17 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
         if (command.matches("^create\\s+topic\\s+-n=(?<topic>\\w+)$")) {
             createTopicCommand.execute(response);
-        }
-        else if (command.matches("^view$")) {
+        } else if (command.matches("^view$")) {
             viewCommand.execute(response);
-        }
-        else if (command.matches("^view\\s+-t=(?<topic>\\w+)$")) {
+        } else if (command.matches("^view\\s+-t=(?<topic>\\w+)$")) {
             viewTopicCommand.execute(response);
-        }
-        else if (command.matches("^create\\s+vote\\s+-t=(?<topic>\\w+)\\s+-n=(?<number>\\d+)$")) {
+        } else if (command.matches("^create\\s+vote\\s+-t=(?<topic>\\w+)\\s+-n=(?<number>\\d+)$")) {
             createVoteCommand.execute(response);
-        }
-        else if (command.matches("^view\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
+        } else if (command.matches("^view\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
             viewVoteCommand.execute(response);
-        }
-        else if (command.matches("^vote\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)\\s+-n=(?<number>\\d+)$")) {
+        } else if (command.matches("^vote\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)\\s+-n=(?<number>\\d+)$")) {
             voteCommand.execute(response);
-        }
-        else if (command.matches("^delete\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
+        } else if (command.matches("^delete\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$")) {
             deleteVoteCommand.execute(response);
         }
     }

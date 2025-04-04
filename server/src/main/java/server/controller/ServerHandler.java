@@ -22,14 +22,11 @@ public class ServerHandler {
 
         if (command.matches("^load\\s+(?<filename>\\S+)$")) {
             loadCommand.execute(command);
-        }
-        else if (command.matches("^save\\s+(?<filename>\\S+)$")) {
+        } else if (command.matches("^save\\s+(?<filename>\\S+)$")) {
             saveCommand.execute(command);
-        }
-        else if (command.matches("^exit$")) {
+        } else if (command.matches("^exit$")) {
             exitCommand.execute(command);
-        }
-        else {
+        } else {
             System.out.println("Такой команды не существует.");
             read();
         }
