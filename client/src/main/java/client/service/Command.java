@@ -1,16 +1,17 @@
 package client.service;
 
 import client.NettyClient;
-import client.controller.Response;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import client.controller.ClientHandler;
+import client.controller.response.Response;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 
-@Component
-@RequiredArgsConstructor
 public abstract class Command {
 
-    private final NettyClient client;
+    @Autowired @Lazy protected NettyClient client;
+    @Autowired @Lazy protected ClientHandler clientHandler;
 
     public abstract void execute(String command);
+
     public abstract void execute(Response response);
 }

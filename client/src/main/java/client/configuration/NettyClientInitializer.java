@@ -1,6 +1,6 @@
 package client.configuration;
 
-import client.controller.NettyClientHandler;
+import client.controller.ServerHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -13,13 +13,13 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 public class NettyClientInitializer extends ChannelInitializer<SocketChannel> {
 
-    private final NettyClientHandler nettyClientHandler;
+    private final ServerHandler serverHandler;
 
     @Override
     protected void initChannel(SocketChannel ch) {
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast(new StringDecoder());
         pipeline.addLast(new StringEncoder());
-        pipeline.addLast(nettyClientHandler);
+        pipeline.addLast(serverHandler);
     }
 }

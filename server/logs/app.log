@@ -1,0 +1,486 @@
+2025-04-04 14:32:31 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 16852 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 14:32:31 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 14:32:32 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 14:32:32 [restartedMain] INFO  server.Application - Started Application in 1.286 seconds (process running for 2.58)
+2025-04-04 14:37:44 [nioEventLoopGroup-3-2] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xd15f4d19, L:/127.0.0.1:8080 - R:/127.0.0.1:53588]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 14:43:31 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 14:43:31 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 14:43:40 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 16912 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 14:43:40 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 14:43:41 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 14:43:41 [restartedMain] INFO  server.Application - Started Application in 0.785 seconds (process running for 1.352)
+2025-04-04 14:54:35 [nioEventLoopGroup-3-2] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x443ad2a4, L:/127.0.0.1:8080 - R:/127.0.0.1:53727]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 14:54:39 [nioEventLoopGroup-3-3] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xbfea149b, L:/127.0.0.1:8080 - R:/127.0.0.1:53728]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 14:58:43 [nioEventLoopGroup-3-4] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x39fb0738, L:/127.0.0.1:8080 - R:/127.0.0.1:53762]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 14:58:46 [nioEventLoopGroup-3-5] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x6078ed8a, L:/127.0.0.1:8080 - R:/127.0.0.1:53764]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 14:59:20 [nioEventLoopGroup-3-6] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xd4026813, L:/127.0.0.1:8080 - R:/127.0.0.1:53772]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:10:07 [nioEventLoopGroup-3-7] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x22d0667f, L:/127.0.0.1:8080 - R:/127.0.0.1:53841]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:10:11 [nioEventLoopGroup-3-8] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x1a008821, L:/127.0.0.1:8080 - R:/127.0.0.1:53842]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:14:31 [nioEventLoopGroup-3-9] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x311153a3, L:/127.0.0.1:8080 - R:/127.0.0.1:53868]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:17:07 [nioEventLoopGroup-3-10] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x4400dd69, L:/127.0.0.1:8080 - R:/127.0.0.1:53880]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:19:37 [nioEventLoopGroup-3-11] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x8121964b, L:/127.0.0.1:8080 - R:/127.0.0.1:53916]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:28:40 [nioEventLoopGroup-3-12] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xd5d71d0b, L:/127.0.0.1:8080 - R:/127.0.0.1:53975]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:30:19 [nioEventLoopGroup-3-13] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0xc75b991f, L:/127.0.0.1:8080 - R:/127.0.0.1:53983]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:31:22 [nioEventLoopGroup-3-14] WARN  io.netty.channel.ChannelInitializer - Failed to initialize a channel. Closing: [id: 0x89565ab2, L:/127.0.0.1:8080 - R:/127.0.0.1:53990]
+io.netty.channel.ChannelPipelineException: server.configuration.RequestDecoder$$SpringCGLIB$$0 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:549) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:166) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at server.configuration.NettyServerInitializer.initChannel(NettyServerInitializer.java:24) ~[classes/:?]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-04-04 15:34:20 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 15:34:20 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 15:34:30 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 4644 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 15:34:30 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 15:34:30 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 15:34:30 [restartedMain] INFO  server.Application - Started Application in 0.777 seconds (process running for 1.331)
+2025-04-04 15:40:54 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 15:40:54 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 15:41:04 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 7688 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 15:41:04 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 15:41:04 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 15:41:04 [restartedMain] INFO  server.Application - Started Application in 0.775 seconds (process running for 1.326)
+2025-04-04 15:44:52 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 15:44:52 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 15:45:02 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 5232 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 15:45:02 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 15:45:03 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 15:45:03 [restartedMain] INFO  server.Application - Started Application in 0.767 seconds (process running for 1.312)
+2025-04-04 15:52:35 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 15:52:35 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 15:52:43 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 4672 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 15:52:43 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 15:52:43 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 15:52:43 [restartedMain] INFO  server.Application - Started Application in 0.773 seconds (process running for 1.317)
+2025-04-04 15:55:36 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 15:55:36 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 15:55:50 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 15912 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 15:55:50 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 15:55:50 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 15:55:50 [restartedMain] INFO  server.Application - Started Application in 0.77 seconds (process running for 1.323)
+2025-04-04 16:10:47 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 16:10:47 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 16:10:57 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 15624 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 16:10:57 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 16:10:58 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 16:10:58 [restartedMain] INFO  server.Application - Started Application in 0.761 seconds (process running for 1.311)
+2025-04-04 16:14:42 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 16:14:42 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 16:14:50 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 16168 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 16:14:50 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 16:14:51 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 16:14:51 [restartedMain] INFO  server.Application - Started Application in 0.794 seconds (process running for 1.34)
+2025-04-04 16:28:11 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 16:28:11 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 17:49:34 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 8132 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 17:49:34 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 17:49:35 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 17:49:35 [restartedMain] INFO  server.Application - Started Application in 0.759 seconds (process running for 1.306)
+2025-04-04 17:58:05 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 17:58:05 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 23:32:19 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 9540 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 23:32:19 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 23:32:20 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 23:32:20 [restartedMain] INFO  server.Application - Started Application in 0.798 seconds (process running for 1.358)
+2025-04-04 23:37:16 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 23:37:16 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 23:37:26 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 5400 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 23:37:26 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 23:37:27 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 23:37:27 [restartedMain] INFO  server.Application - Started Application in 0.817 seconds (process running for 1.428)
+2025-04-04 23:40:12 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-04 23:40:12 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-04 23:57:29 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 6824 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-04 23:57:29 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-04 23:57:29 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-04 23:57:29 [restartedMain] INFO  server.Application - Started Application in 0.801 seconds (process running for 1.356)
+2025-04-05 00:01:42 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-05 00:01:42 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-05 00:01:49 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 17668 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-05 00:01:49 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:01:49 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-05 00:01:49 [restartedMain] INFO  server.Application - Started Application in 0.845 seconds (process running for 1.481)
+2025-04-05 00:04:50 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-05 00:04:50 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-05 00:04:56 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 1308 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-05 00:04:56 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:04:56 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-05 00:04:56 [restartedMain] INFO  server.Application - Started Application in 0.816 seconds (process running for 1.366)
+2025-04-05 00:09:16 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-05 00:09:16 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-05 00:09:22 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 15676 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-05 00:09:22 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:09:22 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-05 00:09:22 [restartedMain] INFO  server.Application - Started Application in 0.791 seconds (process running for 1.374)
+2025-04-05 00:09:24 [restartedMain] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-05 00:09:24 [restartedMain] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-05 00:12:03 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 16568 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-05 00:12:03 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:12:04 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-05 00:12:04 [restartedMain] INFO  server.Application - Started Application in 0.818 seconds (process running for 1.465)
+2025-04-05 00:13:21 [SpringApplicationShutdownHook] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-05 00:13:21 [SpringApplicationShutdownHook] INFO  server.NettyServer - Netty-сервер остановлен.
+2025-04-05 00:13:27 [restartedMain] INFO  server.Application - Starting Application using Java 21.0.5 with PID 8372 (C:\Users\sasha\IdeaProjects\NettyClientServer\server\target\classes started by Alexander in C:\Users\sasha\IdeaProjects\NettyClientServer)
+2025-04-05 00:13:27 [restartedMain] INFO  server.Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:13:28 [Thread-4] INFO  server.NettyServer - Netty-сервер запущен на порту 8080
+2025-04-05 00:13:28 [restartedMain] INFO  server.Application - Started Application in 0.804 seconds (process running for 1.358)
+2025-04-05 00:13:34 [restartedMain] INFO  server.NettyServer - Остановка Netty-сервера...
+2025-04-05 00:13:34 [restartedMain] INFO  server.NettyServer - Netty-сервер остановлен.
