@@ -53,7 +53,7 @@ public class CreateVoteCommand extends Command {
             }
 
             var request = Request.builder()
-                .serverCommand("post/vote")
+                .serverCommand("post/votes")
                 .clientCommand("create vote -t=" + matcher.group("topic") + " -n=2")
                 .login(client.getLogin())
                 .body(matcher.group("topic") + "|" + vote + "|" + desc + "|" + count + answers)

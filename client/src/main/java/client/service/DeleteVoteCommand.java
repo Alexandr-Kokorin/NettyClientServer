@@ -13,7 +13,7 @@ public class DeleteVoteCommand extends Command {
         var matcher = Pattern.compile("^delete\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$").matcher(command);
         var matches = matcher.matches();
         var request = Request.builder()
-            .serverCommand("delete/vote")
+            .serverCommand("delete/votes")
             .clientCommand(command)
             .login(client.getLogin())
             .body(matcher.group("topic") + "|" + matcher.group("vote"))

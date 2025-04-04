@@ -17,7 +17,7 @@ public class VoteCommand extends Command {
         var matcher = Pattern.compile("^vote\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$").matcher(command);
         var matches = matcher.matches();
         var request = Request.builder()
-            .serverCommand("get/vote")
+            .serverCommand("get/votes/name")
             .clientCommand(command + " -n=1")
             .login(client.getLogin())
             .body(matcher.group("topic") + "|" + matcher.group("vote"))
@@ -37,11 +37,7 @@ public class VoteCommand extends Command {
 
     private void execute1(Response response, Matcher matcher) {
         if (response.status() == 200) {
-            var vote = response.body().split("\\|");
-            System.out.println(vote[0]);
-            for (int i = 1; i < vote.length; i += 2) {
-                System.out.println(vote[i] + " - " + vote[i + 1]);
-            }
+            printVote(response);
             System.out.println("Ваш выбор:");
             var ans = scanner.nextLine();
 
@@ -55,6 +51,14 @@ public class VoteCommand extends Command {
         } else {
             System.out.println(response.body());
             clientHandler.read();
+        }
+    }
+
+    private void printVote(Response response) {
+        var vote = response.body().split("\\|");
+        System.out.println(vote[0]);
+        for (int i = 1; i < vote.length; i += 2) {
+            System.out.println(vote[i] + " - " + vote[i + 1]);
         }
     }
 

@@ -13,7 +13,7 @@ public class ViewVoteCommand extends Command {
         var matcher = Pattern.compile("^view\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)$").matcher(command);
         var matches = matcher.matches();
         var request = Request.builder()
-            .serverCommand("get/vote")
+            .serverCommand("get/votes/name")
             .clientCommand(command)
             .login(client.getLogin())
             .body(matcher.group("topic") + "|" + matcher.group("vote"))
