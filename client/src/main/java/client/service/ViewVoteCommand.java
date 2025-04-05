@@ -24,11 +24,7 @@ public class ViewVoteCommand extends Command {
     @Override
     public void execute(Response response) {
         if (response.status() == 200) {
-            var vote = response.body().split("\\|");
-            System.out.println(vote[0]);
-            for (int i = 1; i < vote.length; i += 2) {
-                System.out.println(vote[i] + " - " + vote[i + 1]);
-            }
+            dataWriter.writeVote(response.body());
         } else {
             System.out.println(response.body());
         }

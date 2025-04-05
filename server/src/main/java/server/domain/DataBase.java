@@ -3,6 +3,7 @@ package server.domain;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
 import java.util.HashMap;
@@ -32,8 +33,17 @@ public class DataBase {
         return topics.get(topic).votes.keySet();
     }
 
-    public Vote getVote(String topic, String vote) {
-        return topics.get(topic).votes.get(vote);
+    public String getVoteDesc(String topic, String vote) {
+        return topics.get(topic).votes.get(vote).description;
+    }
+
+    public Map<String, Integer> getVoteMap(String topic, String vote) {
+        var answers = topics.get(topic).votes.get(vote).answers;
+        Map<String, Integer> map = new HashMap<>();
+        for (String ans : answers.keySet()) {
+            map.put(ans, answers.get(ans).users.size());
+        }
+        return map;
     }
 
     public boolean isExistTopic(String topic) {
@@ -74,6 +84,10 @@ public class DataBase {
         topics.get(topic).votes.get(vote).answers.get(answer).users.add(user);
     }
 
+    public void deleteVote(String topic, String vote) {
+        topics.get(topic).votes.remove(vote);
+    }
+
 
     @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
     public static class Topic {
@@ -82,10 +96,11 @@ public class DataBase {
     }
 
     @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+    @NoArgsConstructor
     public static class Vote {
 
-        private final String creator;
-        private final String description;
+        private String creator;
+        private String description;
         private final Map<String, Answer> answers = new ConcurrentHashMap<>();
 
         public Vote( String creator, String description, List<String> answers) {

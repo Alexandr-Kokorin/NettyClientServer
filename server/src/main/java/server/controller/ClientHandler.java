@@ -36,6 +36,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<String> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg) {
         var request = requestDecoder.decode(msg);
+        log.info("Received request: {}", request);
         var response = switch (request.serverCommand()) {
             case "post/topics" -> createTopicCommand.execute(request);
             case "post/votes" -> createVoteCommand.execute(request);
@@ -46,6 +47,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<String> {
             case "get/votes/name" -> getVoteCommand.execute(request);
             default -> throw new IllegalStateException("Unexpected value: " + request.serverCommand());
         };
+        log.info("Sending response: {}", response);
         ctx.writeAndFlush(responseEncoder.encode(response));
     }
 

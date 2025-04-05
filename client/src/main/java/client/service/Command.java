@@ -10,6 +10,7 @@ public abstract class Command {
 
     @Autowired @Lazy protected NettyClient client;
     @Autowired @Lazy protected ClientHandler clientHandler;
+    @Autowired @Lazy protected DataWriter dataWriter;
 
     public abstract void execute(String command);
 

@@ -30,39 +30,42 @@ public class VoteCommand extends Command {
         var matcher = Pattern.compile("^vote\\s+-t=(?<topic>\\w+)\\s+-v=(?<vote>\\w+)\\s+-n=(?<number>\\d+)$").matcher(response.clientCommand());
         var matches = matcher.matches();
         switch (matcher.group("number")) {
-            case "1" -> execute1(response, matcher);
-            case "2" -> execute2(response);
+            case "1" -> executeFirst(response, matcher);
+            case "2" -> executeSecond(response);
         }
     }
 
-    private void execute1(Response response, Matcher matcher) {
+    private void executeFirst(Response response, Matcher matcher) {
         if (response.status() == 200) {
-            printVote(response);
-            System.out.println("Ваш выбор:");
-            var ans = scanner.nextLine();
-
-            var request = Request.builder()
-                .serverCommand("post/vote")
-                .clientCommand("vote -t=" + matcher.group("topic") + " -v=" + matcher.group("vote") + " -n=2")
-                .login(client.getLogin())
-                .body(matcher.group("topic") + "|" + matcher.group("vote") + "|" + ans)
-                .build();
-            client.send(request);
+            executeFirstOk(response.body(), matcher);
         } else {
-            System.out.println(response.body());
-            clientHandler.read();
+            executeFirstError(response.body());
         }
     }
 
-    private void printVote(Response response) {
-        var vote = response.body().split("\\|");
-        System.out.println(vote[0]);
-        for (int i = 1; i < vote.length; i += 2) {
-            System.out.println(vote[i] + " - " + vote[i + 1]);
-        }
+    private void executeFirstOk(String body, Matcher matcher) {
+        dataWriter.writeVote(body);
+        var answer = read();
+        var request = Request.builder()
+            .serverCommand("post/vote")
+            .clientCommand("vote -t=" + matcher.group("topic") + " -v=" + matcher.group("vote") + " -n=2")
+            .login(client.getLogin())
+            .body(matcher.group("topic") + "|" + matcher.group("vote") + "|" + answer)
+            .build();
+        client.send(request);
     }
 
-    private void execute2(Response response) {
+    private String read() {
+        System.out.println("Ваш выбор:");
+        return scanner.nextLine();
+    }
+
+    private void executeFirstError(String body) {
+        System.out.println(body);
+        clientHandler.read();
+    }
+
+    private void executeSecond(Response response) {
         if (response.status() == 200) {
             System.out.println("Вы успешно проголосовали.");
         } else {

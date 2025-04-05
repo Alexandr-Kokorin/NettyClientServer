@@ -24,10 +24,7 @@ public class ViewTopicCommand extends Command {
     @Override
     public void execute(Response response) {
         if (response.status() == 200) {
-            var votes = response.body().split("\\|");
-            for (String vote : votes) {
-                System.out.println(vote);
-            }
+            dataWriter.writeTopic(response.body());
         } else {
             System.out.println(response.body());
         }

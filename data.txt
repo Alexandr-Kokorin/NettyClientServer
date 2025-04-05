@@ -1,0 +1,57 @@
+{
+  "topics" : {
+    "pop" : {
+      "votes" : { }
+    },
+    "top" : {
+      "votes" : {
+        "yy" : {
+          "creator" : "z",
+          "description" : "sfs",
+          "answers" : {
+            "tt" : {
+              "users" : [ "z" ]
+            },
+            "hh" : {
+              "users" : [ ]
+            }
+          }
+        },
+        "r1" : {
+          "creator" : "z",
+          "description" : "aaaaaaaa",
+          "answers" : {
+            "" : {
+              "users" : [ ]
+            },
+            "qqqq" : {
+              "users" : [ "t" ]
+            }
+          }
+        }
+      }
+    },
+    "sas" : {
+      "votes" : {
+        "php" : {
+          "creator" : "t",
+          "description" : "hhhhhhhhhhhh",
+          "answers" : {
+            "" : {
+              "users" : [ ]
+            },
+            "a" : {
+              "users" : [ ]
+            },
+            "b" : {
+              "users" : [ ]
+            },
+            "c" : {
+              "users" : [ ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

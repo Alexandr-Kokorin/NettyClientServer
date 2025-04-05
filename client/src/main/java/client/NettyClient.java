@@ -40,14 +40,10 @@ public class NettyClient {
             channel.close();
         }
         eventLoopGroup.shutdownGracefully();
-        System.out.println("Завершение работы.");
+        System.out.println("Завершение работы...");
     }
 
     public void send(Request request) {
-        try {
-            channel.writeAndFlush(requestEncoder.encode(request));
-        } catch (Exception e) {
-            System.out.println("Сервер недоступен, попробуйте позже.");
-        }
+        channel.writeAndFlush(requestEncoder.encode(request));
     }
 }

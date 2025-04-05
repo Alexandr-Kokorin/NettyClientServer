@@ -51,7 +51,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        cause.printStackTrace();
+        System.out.println("Сервер недоступен, попробуйте позже.");
         ctx.close();
     }
 }
